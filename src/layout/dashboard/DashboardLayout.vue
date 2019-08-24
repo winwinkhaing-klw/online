@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
-    <side-bar>
-      <template slot="links">
+    <!-- <side-bar> -->
+      <!-- <template slot="links">
         <sidebar-link to="/dashboard" name="Dashboard" icon="ti-panel"/>
         <sidebar-link to="/stats" name="User Profile" icon="ti-user"/>
         <sidebar-link to="/table-list" name="Table List" icon="ti-view-list-alt"/>
@@ -9,8 +9,8 @@
         <sidebar-link to="/icons" name="Icons" icon="ti-pencil-alt2"/>
         <sidebar-link to="/maps" name="Map" icon="ti-map"/>
         <sidebar-link to="/notifications" name="Notifications" icon="ti-bell"/>
-      </template>
-      <mobile-menu>
+      </template> -->
+      <!-- <mobile-menu>
         <li class="nav-item">
           <a class="nav-link">
             <i class="ti-panel"></i>
@@ -34,12 +34,12 @@
           </a>
         </li>
         <li class="divider"></li>
-      </mobile-menu>
-    </side-bar>
+      </mobile-menu> -->
+    <!-- </side-bar> -->
     <div class="main-panel">
       <top-navbar></top-navbar>
 
-      <dashboard-content @click.native="toggleSidebar">
+      <dashboard-content @click.native="toggleNavbar">
 
       </dashboard-content>
 
@@ -62,9 +62,9 @@ export default {
     MobileMenu
   },
   methods: {
-    toggleSidebar() {
-      if (this.$sidebar.showSidebar) {
-        this.$sidebar.displaySidebar(false);
+    toggleNavbar() {
+      if (this.$navbar.showNavbar) {
+        this.$$navbar.displayNavbar(false);
       }
     }
   }
